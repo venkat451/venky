@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-MAINTAINER Andrew Odewahn "odewahn@oreilly.com"
+# Pull base image 
+From tomcat:8-jre8 
 
-RUN apt-get update
+# Maintainer 
+MAINTAINER "venkat451@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
