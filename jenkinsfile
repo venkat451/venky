@@ -2,7 +2,11 @@ node{
     stage('SCM Checkout'){
         git 'https://github.com/venkat451/venky'
     }
-     stage('Compile-Package'){
-       sh 'mvn package'
+     
+ 	stage('Compile-Package'){
+       		def mvnHome = tool name: 'M3', type: 'maven'
+       		sh "${mvnHome}/bin/mvn package"
 	}
 }
+	
+
