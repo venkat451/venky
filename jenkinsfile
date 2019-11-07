@@ -1,0 +1,8 @@
+node{
+    stage('SCM Checkout'){
+        git 'https://github.com/venkat451/venky'
+    }
+     stage('Compile-Package'){
+       sh 'mvn package'
+	}
+}
